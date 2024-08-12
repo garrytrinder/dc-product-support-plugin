@@ -1,0 +1,84 @@
+{
+  "$schema": "https://aka.ms/json-schemas/copilot-extensions/v2.1/plugin.schema.json",
+  "schema_version": "v2.1",
+  "namespace": "repairs",
+  "name_for_human": "Contoso Electronics Repair Tracker",
+  "description_for_human": "Track your repair records",
+  "description_for_model": "Plugin for searching a repair list, you can search by who's assigned to the repair.",
+  "functions": [
+    {
+      "name": "listRepairs",
+      "description": "Returns a list of repairs with their details",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "assignedTo": {
+            "type": "string",
+            "description": "The person assigned to the repair"
+          }
+        }
+      },
+      "capabilities": {
+        "response_semantics": {
+          "data_path": "$.results",
+          "properties": {
+            "title": "$.title",
+            "subtitle": "$.assignedTo"
+          },
+          "static_template": {
+            "type": "AdaptiveCard",
+            "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+            "version": "1.5",
+            "body": [
+              {
+                "type": "Container",
+                "$data": "${$root}",
+                "items": [
+                  {
+                    "type": "TextBlock",
+                    "text": "${title}",
+                    "wrap": true,
+                    "style": "heading"
+                  },
+                  {
+                    "type": "TextBlock",
+                    "text": "${description}",
+                    "wrap": true
+                  },
+                  {
+                    "type": "FactSet",
+                    "facts": [
+                      {
+                        "title": "Assigned to",
+                        "value": "${assignedTo}"
+                      },
+                      {
+                        "title": "Date",
+                        "value": "${formatDateTime(date,'MM/dd/yyyy')}"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      }
+    }
+  ],
+  "runtimes": [
+    {
+      "type": "OpenApi",
+      "auth": {
+        "type": "None"
+      },
+      "spec": {
+        "url": "apiSpecificationFile/repair.yml",
+        "progress_style": "ShowUsageWithInputAndOutput"
+      },
+      "run_for_functions": [
+        "listRepairs"
+      ]
+    }
+  ]
+}

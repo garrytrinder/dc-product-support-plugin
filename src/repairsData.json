@@ -1,0 +1,37 @@
+[
+  {
+    "id": "1",
+    "title": "Mark8 Controller Battery Replacement",
+    "description": "The battery of the Mark8 Controller needs to be replaced as it no longer holds a charge for more than an hour.",
+    "assignedTo": "Alex Johnson",
+    "date": "2024-08-01"
+  },
+  {
+    "id": "2",
+    "title": "Gimbal Case Lock Mechanism Repair",
+    "description": "The dual-stage lock mechanism of the Gimbal Case is malfunctioning and needs repair to ensure the case secures properly.",
+    "assignedTo": "Jamie Lee",
+    "date": "2024-08-02"
+  },
+  {
+    "id": "3",
+    "title": "Mark8 Drone Propeller Replacement",
+    "description": "The propellers of the Mark8 drone are damaged and need to be replaced to ensure stable flight.",
+    "assignedTo": "Taylor Smith",
+    "date": "2024-08-03"
+  },
+  {
+    "id": "4",
+    "title": "Mark8 Controller Screen Repair",
+    "description": "The integrated screen of the Mark8 Controller is cracked and needs to be repaired to restore full functionality.",
+    "assignedTo": "Morgan Brown",
+    "date": "2024-08-04"
+  },
+  {
+    "id": "5",
+    "title": "Gimbal Case Foam Replacement",
+    "description": "The custom foam interior of the Gimbal Case needs to be replaced as it has worn out and no longer provides a secure fit for the drone.",
+    "assignedTo": "Casey Davis",
+    "date": "2024-08-05"
+  }
+]
