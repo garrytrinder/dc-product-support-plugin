@@ -9,6 +9,14 @@ This sample demonstrates how to use Teams Toolkit for Visual Studio Code to crea
 - Knowledge from documents stored in a SharePoint Online document library
 - API plugin to get real-time data from external source
 
+## Prerequisites
+
+- [Node.js](https://nodejs.org/)
+- [Visual Studio Code](https://code.visualstudio.com/) preview with `TEAMSFX_DECLARATIVE_COPILOT=true` environment variable set
+- [Teams Toolkit CLI](https://www.npmjs.com/package/@microsoft/teamsapp-cli)
+- [Teams Toolkit for Visual Studio Code](https://aka.ms/teams-toolkit)
+- Microsoft 365 tenant with Declarative copilot features enabled
+
 ## Minimal path to awesome
 
 1. Upload the documents in the [docs](./docs/) folder to a document library in a SharePoint Online site
